@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manchow Wok</title>
+    <link rel="shortcut icon" type="x-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="mainlink">
+                <span class="red-text" style="color: red; padding-right: 20px;"> Manchow</span>Wok
+            </div>
+            <ul class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="about3.html" target="_blank">About</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="half-cylinder"></div>
+    </div>
+
+    <h1 class="title">THE ULTIMATE<br>CHINESE TASTE</h1>
+    <button class="btn"><a href="menu.html" target="_blank">Menu</a></button>
+
+    <div class="cylinder-container">
+        <div class="cylinder"></div>
+        <div class="cylinder1"></div>
+        <div class="cylinder2"></div>
+    </div>
+
+    <div class="image-container">
+        <div class="prawn">
+            <img src="rice.png">
+        </div>
+        <div class="roll">
+            <img src="pngegg (2).png">
+        </div>
+        <div class="momo">
+            <img src="pngwing.com (2).png">
+        </div>
+    </div>
+
+    <div class="card-section">
+        <div class="image">
+            <img src="Untitled design.png">
+        </div>
+        <div class="card-container">
+            <div class="card-row">
+                <div class="card card1">
+                    <div class="card-image">
+                        <img src="Abu Dhabi Mall.jpeg" alt="Image 1">
+                    </div>
+                    <div class="card-content">
+                        <h3>Abu Dhabi Location</h3>
+                        <p>location 1</p>
+                    </div>
+                </div>
+                <div class="card card2">
+                    <div class="card-image">
+                        <img src="al wadha mall.jpeg" alt="Image 2">
+                    </div>
+                    <div class="card-content">
+                        <h3>Al wadha location</h3>
+                        <p>location2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-row">
+                <div class="card card3">
+                    <div class="card-image">
+                        <img src="khalidiyah Mall.jpeg" alt="Image 3">
+                    </div>
+                    <div class="card-content">
+                        <h3>khalidiyah location</h3>
+                        <p>location3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <button class="location">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Visit Us
+    </button>
+    <div class="relative-parent">
+   
+    <div class="line"></div>
+</div>
+</div>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+  
+          <h3>Manchow<span> Wok</span></h3>
+  
+          <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            
+           
+          
+           
+          
+            <a href="#">Menu</a>
+            
+            <a href="#">About</a>
+            
+            <a href="#">Contact</a>
+          </p>
+  
+          <p class="footer-company-name">Manchowwok © 2015</p>
+        </div>
+  
+        <div class="footer-center">
+  
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Abu Dhabi Mall</span> Khalidiyah Mall, Al Wadha Mall</p>
+          </div>
+  
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+971 0556262074</p>
+          </div>
+  
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:Manchowwok.rest@gmail.com">Manchowwok.rest@gmail.com</a></p>
+          </div>
+  
+        </div>
+  
+        <div class="footer-right">
+  
+          <p class="footer-company-about">
+            <span>About the Manchwowok</span>
+            Manchowok is a renowned Chinese restaurant located in the heart of Dubai, UAE, known for its authentic and flavorful dishes. With a blend of traditional recipes and modern culinary techniques, it offers a unique dining experience that delights both locals and tourists.
+  
+          </p>
+  
+          <div class="footer-icons">
+  
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+  
+          </div>
+  
+        </div>
+    </footer>    
+</body>
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    function observeCards() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    if (index === 0) {
+                        entry.target.classList.add('animate');
+                        entry.target.querySelector('.card-image').classList.add('animate');
+                        observer.unobserve(entry.target);
+                    } else if (index === 1) {
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                            entry.target.querySelector('.card-image').classList.add('animate');
+                            observer.unobserve(entry.target);
+                        }, 500);
+                    } else {
+                        entry.target.classList.add('animate');
+                        entry.target.querySelector('.card-image').classList.add('animate');
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        cards.forEach((card) => {
+            observer.observe(card);
+        });
+    }
+
+    observeCards();
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const links = document.querySelector('.links');
+
+        menuToggle.addEventListener('click', function () {
+            menuToggle.classList.toggle('active');
+            if (links.style.display === 'flex') {
+                links.style.display = 'none';
+            } else {
+                links.style.display = 'flex';
+                links.style.flexDirection = 'column';
+                links.style.position = 'absolute';
+                links.style.top = '60px';
+                links.style.right = '20px';
+                links.style.backgroundColor = 'white';
+                links.style.width = '200px';
+                links.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    });
+</script>
+</html>
